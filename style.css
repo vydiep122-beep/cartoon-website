@@ -1,0 +1,259 @@
+
+/* Cài đặt chung */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+/* Header cố định khi cuộn trang */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 16px 5%;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.logo span {
+    color: #333;
+}
+
+.slogan {
+    color: #777;
+    font-size: 14px;
+}
+
+/* Menu điều hướng */
+.head-link {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #e74c3c;
+}
+
+.head-link a {
+    padding: 14px 22px;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.head-link a:hover,
+.head-link a.active {
+    background-color: #b93225;
+    font-weight: bold;
+}
+
+/* Bố cục hai cột */
+.content {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 25px auto;
+}
+
+/* Cột danh sách phim */
+.left-content {
+    width: 30%;
+    flex-shrink: 0;
+    padding: 15px;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 1px 5px #ddd;
+}
+
+.left-content h3 {
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e74c3c;
+}
+
+.movie-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #eee;
+}
+
+.movie-link:hover {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.movie-link img {
+    width: 100px;
+    max-width: 40%;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.movie-note {
+    margin-top: 15px;
+    color: #777;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* Cột video */
+.right-content {
+    flex: 1;
+    min-width: 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 1px 5px #ddd;
+}
+
+.right-content h2 {
+    margin-top: 0;
+    color: #e74c3c;
+    font-size: 24px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: #000;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.right-content p {
+    line-height: 1.7;
+}
+
+.video-html {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+}
+
+.video-html video {
+    display: block;
+    width: 100%;
+    max-height: 400px;
+    background-color: #000;
+}
+
+.note {
+    color: #777;
+    font-size: 13px;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer p {
+    margin: 5px;
+}
+
+/* Responsive cho máy tính bảng */
+@media screen and (max-width: 768px) {
+    .content {
+        width: 95%;
+        gap: 12px;
+    }
+
+    .left-content {
+        width: 35%;
+    }
+
+    .right-content {
+        padding: 15px;
+    }
+
+    .movie-link {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .movie-link img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Responsive cho điện thoại */
+@media screen and (max-width: 520px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 12px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .head-link a {
+        flex: 1;
+        padding: 12px 8px;
+        text-align: center;
+        font-size: 13px;
+    }
+
+    .content {
+        flex-direction: column;
+        width: 94%;
+        margin: 15px auto;
+    }
+
+    .left-content,
+    .right-content {
+        width: 100%;
+    }
+
+    .movie-link {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .movie-link img {
+        width: 110px;
+        max-width: 40%;
+        height: 65px;
+    }
+
+    .right-content h2 {
+        font-size: 20px;
+    }
+}

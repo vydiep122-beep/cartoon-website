@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thế Giới Hoạt Hình</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">🎬 HoatHinh<span>TV</span></div>
+        <div class="slogan">Thế giới hoạt hình dành cho bé</div>
+    </header>
+
+    <!-- Menu điều hướng -->
+    <nav class="head-link">
+        <a href="#" class="active">Trang chủ</a>
+        <a href="#moi-cap-nhat">Phim mới</a>
+        <a href="#xem-nhieu">Xem nhiều</a>
+        <a href="#gioi-thieu">Giới thiệu</a>
+    </nav>
+
+    <!-- Nội dung chính -->
+    <div class="content">
+
+        <!-- Danh sách phim bên trái -->
+        <aside class="left-content">
+            <h3>Danh sách phim</h3>
+
+            <a class="movie-link"
+               href="https://www.youtube.com/embed/aqz-KE-bpKQ"
+               target="movie-player">
+                <img src="https://img.youtube.com/vi/aqz-KE-bpKQ/mqdefault.jpg"
+                     alt="Phim hoạt hình Big Buck Bunny">
+                <span>1. Big Buck Bunny</span>
+            </a>
+
+            <a class="movie-link"
+               href="https://www.youtube.com/embed/M7lc1UVf-VE"
+               target="movie-player">
+                <img src="https://img.youtube.com/vi/M7lc1UVf-VE/mqdefault.jpg"
+                     alt="Video hoạt hình mẫu">
+                <span>2. Video hoạt hình mẫu</span>
+            </a>
+
+            <a class="movie-link"
+               href="https://www.youtube.com/embed/ScMzIvxBSi4"
+               target="movie-player">
+                <img src="https://img.youtube.com/vi/ScMzIvxBSi4/mqdefault.jpg"
+                     alt="Video giải trí">
+                <span>3. Video giải trí</span>
+            </a>
+
+            <div class="movie-note">
+                Chọn một video ở danh sách để xem.
+            </div>
+        </aside>
+
+        <!-- Video bên phải -->
+        <main class="right-content" id="moi-cap-nhat">
+            <h2>Big Buck Bunny - Phim hoạt hình</h2>
+
+            <div class="video-container">
+                <iframe
+                    name="movie-player"
+                    src="https://www.youtube.com/embed/aqz-KE-bpKQ"
+                    title="Video phim hoạt hình"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <h3 id="xem-nhieu">Nội dung video</h3>
+            <p>
+                Chào mừng bạn đến với thế giới hoạt hình!
+                Hãy lựa chọn video ở menu bên trái để xem nội dung yêu thích.
+            </p>
+
+            <div class="video-html">
+                <h3>Ví dụ sử dụng thẻ video HTML5</h3>
+                <video controls preload="metadata">
+                    <source
+                        src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+                        type="video/mp4">
+                    Trình duyệt của bạn không hỗ trợ video.
+                </video>
+                <p class="note">
+                    Đây là video mẫu minh họa cách sử dụng thẻ video HTML5.
+                </p>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" id="gioi-thieu">
+        <p>© 2026 HoatHinhTV - Website học tập HTML và CSS</p>
+        <p>Nội dung video được nhúng từ nguồn bên ngoài.</p>
+    </footer>
+
+</body>
+</html>
